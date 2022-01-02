@@ -1,0 +1,28 @@
+#sprite-image {
+    height: 250px;
+    width: 250px;
+    background: url("spritesheet.png")
+      0px 0px;
+  }
+
+#sprite-image2 {
+  height: 250px;
+  width: 250px;
+  background: url("spritesheet2.png")
+    0px 0px;
+}
+
+#sprite-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+button {
+  font-size: large;
+}
+#btn-container {
+  width: 200px;
+  margin: auto;
+  
+}
