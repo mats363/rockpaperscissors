@@ -57,6 +57,8 @@ let pTwoPoints = 0;
 
 
 function run() {
+    //btnContainer.remove(btn);
+    btn.removeEventListener("click", run);
     p1Sprite.style.backgroundColor = "white";
     p2Sprite.style.backgroundColor = "white";
     p1Sprite.style.backgroundPosition = "-750px 0px";
@@ -72,14 +74,19 @@ function run() {
         p2Sprite.style.backgroundPosition = startImage[countDown];
 
         if (countDown == 3) {
+            btn.addEventListener("click", run);
             clearInterval(game);
             runGame();
+            
         }
+
+        
     }, 500)
 
 }
 
 function runGame() {
+    
     pOne = options[getRandom(3)];
     pTwo = options[getRandom(3)];
     //round++
@@ -104,14 +111,18 @@ function runGame() {
 
     }
 
+    
+
     p1Points.innerText = pOnePoints;
     p2Points.innerText = pTwoPoints;
 
     console.log("Round: " + round)
     console.log("Player 1 points: " + pOnePoints)
     console.log("Player 2 points: " + pTwoPoints)
+    
 
     if (round == 3) {
+        //btnContainer.remove(btn);
         let counter = 0;
         let calculate = setInterval(function () {
             counter++
@@ -121,10 +132,11 @@ function runGame() {
                 pOnePoints = 0;
                 pTwoPoints = 0;
                 round = 0;
+                clearInterval(calculate);
             }
         }, 1000)
-
     }
+    
 }
 
 function getRandom(max) {
@@ -135,7 +147,9 @@ let resultHead = document.createElement("h3");
 resultHead.id = "result-head";
 
 resultContainer.addEventListener("click", function () {
+    
     resultContainer.remove()
+    
     pOnePoints = 0;
     pTwoPoints = 0;
     round = 0;
