@@ -1,17 +1,19 @@
-#sprite-image {
+#p1Sprite {
     height: 250px;
     width: 250px;
     border: 10px solid black;
-    background: url("spritesheet.png")
+    background: url("p1Sprite.png")
       0px 0px;
   }
 
-#sprite-image2 {
+#p2Sprite {
   height: 250px;
   width: 250px;
   border: 10px solid black;
-  background: url("spritesheet2.png")
+  background: url("p1Sprite.png")
     0px 0px;
+  transform: scaleX(-1)
+
 }
 
 #sprite-container {
