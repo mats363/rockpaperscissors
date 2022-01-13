@@ -57,7 +57,6 @@ let pTwoPoints = 0;
 
 
 function run() {
-    //btnContainer.remove(btn);
     btn.removeEventListener("click", run);
     p1Sprite.style.backgroundColor = "white";
     p2Sprite.style.backgroundColor = "white";
@@ -89,7 +88,6 @@ function runGame() {
     
     pOne = options[getRandom(3)];
     pTwo = options[getRandom(3)];
-    //round++
 
     p1Sprite.style.backgroundPosition = pOne.image;
     p2Sprite.style.backgroundPosition = pTwo.image;
@@ -121,8 +119,7 @@ function runGame() {
     console.log("Player 2 points: " + pTwoPoints)
     
 
-    if (round == 3) {
-        //btnContainer.remove(btn);
+    if (round === 3) {
         let counter = 0;
         let calculate = setInterval(function () {
             counter++
