@@ -1,7 +1,29 @@
+#root {
+  top: 20px;
+  margin: 100px;
+  
+  
+  
+  
+}
+
+
+#point-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+#sprite-container {
+  display: flex;
+  justify-content: space-around;
+}
+
 #p1Sprite {
     height: 250px;
     width: 250px;
     border: 10px solid black;
+    border-radius: 10%;
     background: url("p1Sprite.png")
       0px 0px;
   }
@@ -10,23 +32,49 @@
   height: 250px;
   width: 250px;
   border: 10px solid black;
+  border-radius: 10%;
   background: url("p1Sprite.png")
     0px 0px;
   transform: scaleX(-1)
 
 }
 
-#sprite-container {
-  display: flex;
-  justify-content: space-around;
-}
-
 
 button {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: large;
 }
 #btn-container {
+  display: flex;
+  justify-content: space-around;
   width: 200px;
   margin: auto;
   
+}
+
+#result-container {
+  height: 100%;
+  width: 100%;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(177, 177, 177); /* Black fallback color */
+  background-color: rgba(160, 160, 160, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 4s; 
+}
+
+#result-head {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 5rem;
+  position: relative;
+  top: 25%; 
+  width: 100%; 
+  text-align: center; 
+  margin-top: 30px; 
+}
+#round {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 3rem;
 }
